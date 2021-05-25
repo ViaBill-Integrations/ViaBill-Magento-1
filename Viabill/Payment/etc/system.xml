@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © ViaBill. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config>
+    <sections>
+        <payment translate="label" module="payment">
+            <groups>
+                <viabill translate="label">
+                    <label>ViaBill payment</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <viabill_register_form type="group" translate="label">
+                            <label>New User Registration</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <frontend_model>viabill/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <sort_order>100</sort_order>
+                            <fields>
+                                <email translate="label">
+                                    <label>Email</label>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <required>1</required>
+                                    <sort_order>110</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </email>
+                                <country translate="label">
+                                    <label>Country</label>
+                                    <frontend_type>select</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <required>1</required>
+                                    <source_model>viabill/config_country</source_model>
+                                    <sort_order>120</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </country>
+                                <shop_url translate="label">
+                                    <label>Shop URL</label>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <required>1</required>
+                                    <sort_order>130</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </shop_url>
+                                <name translate="label">
+                                    <label>Name</label>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <sort_order>140</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </name>
+                                <phone_number translate="label">
+                                    <label>Phone number</label>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <sort_order>150</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </phone_number>
+                                <merchant_name translate="label">
+                                    <label>Merchant name</label>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <sort_order>160</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </merchant_name>
+                                <terms_and_conditions translate="label">
+                                    <label></label>
+                                    <frontend_class>complex</frontend_class>
+                                    <frontend_model>viabill/adminhtml_system_config_field_tac_checkbox</frontend_model>
+                                    <sort_order>170</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </terms_and_conditions>
+                                <register translate="label">
+                                    <label></label>
+                                    <frontend_type>button</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_form_button_register</frontend_model>
+                                    <sort_order>180</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </register>
+                            </fields>
+                        </viabill_register_form>
+                        <viabill_login_form type="group" translate="label">
+                            <label>Existing User Login</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <frontend_model>viabill/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <sort_order>200</sort_order>
+                            <fields>
+                                <email translate="label">
+                                    <label>Email</label>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>210</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </email>
+                                <password translate="label">
+                                    <label>Password</label>
+                                    <frontend_type>password</frontend_type>
+                                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                                    <sort_order>220</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </password>
+                                <forgotpassword_url translate="label">
+                                    <label></label>
+                                    <sort_order>230</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <frontend_class>complex</frontend_class>
+                                    <frontend_model>viabill/adminhtml_system_config_field_forgotpassword_url</frontend_model>
+                                </forgotpassword_url>
+                                <login translate="label">
+                                    <label></label>
+                                    <frontend_type>button</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_form_button_login</frontend_model>
+                                    <sort_order>240</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </login>
+                            </fields>
+                        </viabill_login_form>
+                        <viabill_config_form type="group" translate="label">
+                            <label>Config Settings</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <frontend_model>viabill/adminhtml_system_config_fieldset_hidden</frontend_model>
+                            <sort_order>300</sort_order>
+                            <fields>
+                                <active translate="label">
+                                    <label>Enabled</label>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>310</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </active>
+                                <title translate="label">
+                                    <label>Title</label>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>320</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </title>
+                                <description translate="label">
+                                    <label>Description</label>
+                                    <frontend_type>textarea</frontend_type>
+                                    <sort_order>330</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </description>
+
+                                <order_status_before_authorization translate="label commend">
+                                    <label>Order status (After checkout is initiated)</label>
+                                    <comment><![CDATA[Set the status of the order before the payment is authorized.]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_order_status_new</source_model>
+                                    <sort_order>338</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </order_status_before_authorization>
+
+                                <order_status_after_authorization translate="label comment">
+                                    <label>Order status (After the payment is authorized)</label>
+                                    <comment><![CDATA[Set the status of the order after the payment is authorized.]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>viabill/source_pendingPayment</source_model>
+                                    <sort_order>340</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </order_status_after_authorization>
+
+                                <order_status_after_capture translate="label comment">
+                                    <label>Order status (After the payment is captured)</label>
+                                    <comment><![CDATA[Set the status of the order after the payment is captured.]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_order_status_processing</source_model>
+                                    <sort_order>342</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </order_status_after_capture>
+
+                                <payment_action translate="label comment">
+                                    <label>Payment Action</label>
+                                    <comment><![CDATA[Action after payment has been approved.]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>viabill/source_paymentAction</source_model>
+                                    <sort_order>345</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </payment_action>
+
+                                <test_transaction translate="label">
+                                    <label>Test Transactions Mode</label>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>350</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </test_transaction>
+                                <sort_order translate="label">
+                                    <label>Sort order</label>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>390</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </sort_order>
+                                <admin_notification_severity translate="label">
+                                    <label>Admin Notifications severity</label>
+                                    <frontend_type>select</frontend_type>
+                                    <sort_order>400</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <source_model>viabill/config_severity</source_model>
+                                </admin_notification_severity>
+                                <debug translate="label">
+                                    <label>Debug Mode</label>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>405</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </debug>
+                                <key translate="label">
+                                    <label>Key</label>
+                                    <frontend_type>password</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                                    <sort_order>410</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </key>
+                                <secret translate="label">
+                                    <label>Secret</label>
+                                    <frontend_type>password</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                                    <sort_order>420</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </secret>
+                                <pricetag_script translate="label">
+                                    <label>priceTagScript</label>
+                                    <frontend_type>textarea</frontend_type>
+                                    <frontend_model>viabill/adminhtml_system_config_field_required</frontend_model>
+                                    <sort_order>430</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </pricetag_script>
+                                <myviabill_url translate="label">
+                                    <label></label>
+                                    <sort_order>440</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <frontend_class>complex</frontend_class>
+                                    <frontend_model>viabill/adminhtml_system_config_field_myviabill_url</frontend_model>
+                                </myviabill_url>
+                            </fields>
+                        </viabill_config_form>
+                        <viabill_price_tag type="group" translate="label">
+                            <label>Pricetag Settings</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <frontend_model>viabill/adminhtml_system_config_fieldset_hidden</frontend_model>
+                            <sort_order>500</sort_order>
+                            <fields>
+                                <notification translate="label">
+                                    <label></label>
+                                    <frontend_type>label</frontend_type>
+                                    <frontend_class>pricetag_notification</frontend_class>
+                                    <frontend_model>viabill/adminhtml_system_config_field_pricetag_notification</frontend_model>
+                                    <sort_order>510</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                    <depends>
+                                        <show_on_product>0</show_on_product>
+                                        <show_on_cart>0</show_on_cart>
+                                        <show_on_checkout>0</show_on_checkout>
+                                    </depends>
+                                </notification>
+                                <show_on_product translate="label">
+                                    <label>Enable on Product page</label>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>520</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </show_on_product>
+                                <show_on_cart translate="label">
+                                    <label>Enable on Cart Summary</label>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>530</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </show_on_cart>
+                                <show_on_checkout translate="label">
+                                    <label>Enable on Checkout Summary</label>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>540</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </show_on_checkout>
+                            </fields>
+                        </viabill_price_tag>
+                    </fields>
+                </viabill>
+            </groups>
+        </payment>
+    </sections>
+</config>

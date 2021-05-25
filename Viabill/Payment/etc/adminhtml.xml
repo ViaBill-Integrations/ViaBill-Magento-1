@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © ViaBill. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config>
+    <menu>
+        <sales>
+            <children>
+                <myviabill translate="title" module="viabill" id="myviabill">
+                    <title>My ViaBill</title>
+                    <sort_order>1000</sort_order>
+                    <action>adminhtml/index/myviabill</action>
+                </myviabill>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <sales translate="title" module="sales">
+                        <title>Sales</title>
+                        <children>
+                            <myviabill translate="title">
+                                <title>My ViaBill</title>
+                            </myviabill>
+                        </children>
+                    </sales>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
